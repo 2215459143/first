@@ -1,0 +1,222 @@
+.lbtn-controls {/*牌序，记录按钮*/
+	--width: 66px;/*按钮宽度*/
+	--height: 55px;/*按钮高度*/
+	left: 18px;/*左边距，越大越靠右*/
+	bottom: 75px;/*整体上移*/
+	width: var(--width);
+	z-index: 5;
+}
+
+.tuoguanButton {
+	display: block;
+	width: 121px;
+	height: 88px;
+	position: absolute;
+	bottom: -7px;
+	left: -25px;
+	background-image: url("./images/auto.png");
+	background-size: 100% 100%;
+	z-index:2
+}
+
+#arena:not(.single-handcard):not(.chess).cxy-new-ui > .lbtn-controls ~ #mebg,
+#arena:not(.single-handcard):not(.chess).cxy-new-ui > .lbtn-controls ~ #me {
+	left: 40px !important;
+}
+.lbtn-controls ~ #me #handcards1 {
+	--lessw: 40px;
+}
+
+.lbtn-controls > div {
+	display: block;
+	position: relative;
+}
+/* 牌序记录*/
+.lbtn-control {
+	width: 68px;
+	height: 55px;
+	background-image: url("./images/btn-bg.png");
+	left: -1px;
+	font-size: 19px;
+	background-size: 100% 100%;
+	background-color: transparent;
+	line-height: var(--height);
+	text-align: center;
+	white-space: nowrap;
+	color: #F5D78E;
+	font-family: 'shousha';
+	font-weight: bold;
+	-webkit-text-stroke: 0.2px rgba(43,31,25,0.2);
+	text-shadow:none;
+	border-radius: 0px;
+	margin-top: 1px; /*上部间距*/
+}
+
+.lbtn-confirm:not(.closing).removing {
+	opacity: 1 !important;
+}
+
+.control {
+	--height: 40px;
+	width: auto !important;
+	background: transparent;
+	box-shadow: none;
+	line-height: normal;
+	padding: 0;
+	font-size: 30px !important;
+}
+.control > div { /*其他按钮(与下面的相反)*/
+	--h: var(--height) !important; /*按钮高度*/
+	--p: calc(var(--h) * 60 / 125) !important;
+	height: var(--h) !important;
+	background-image: url("./images/btn2X.png");
+	background-size: 100% 100%;
+	line-height: 30px;
+	text-align: center;
+	padding: 1px 5px !important; /*按钮高度+宽度 建议别调*/
+	min-width: 80px !important; /*限制最小宽度*/
+	min-height: 15px !important; /*限制最小高度*/
+	margin: 0px 20px !important;
+	text-shadow: 1px 1px 2.5px rgba(62, 57, 38, 0.1);
+	color: #e1c371;
+	font-family: 'HYZLSJ';
+	font-size: 30px;
+	border-radius: 4px;
+	overflow: visible;
+	transition: none;
+}
+.control > div.primary2 {
+	
+}
+
+.control > div + div {
+	margin-left: 15px;
+}
+
+
+.control > div > span { /*确认按钮*/
+	--sh: calc(var(--h) - 6px);
+	display: block;
+	font-size: 40px;
+	line-height: var(--sh);
+	margin: 0px -27px !important;
+	background-image: url("./images/btn.png");
+	padding: 2px 28px !important;/*按钮高度+宽度 建议别调*/
+	min-height: 50px; /*限制最小高度*/
+	min-width: 68px; /*限制最小宽度*/
+	background-size: 100% 108%;
+	text-shadow: 1px 1px 2.5px rgba(62, 57, 38, 0.1);
+	bottom: 0px;
+	position: relative;
+}
+
+.control > div.disabled:not([data-type="endButton"]) {
+	background-size: 100% 100%;
+	/* -webkit-filter: grayscale(100%); /*别管*/
+}
+.lbtn-confirm[data-skill] > [data-type="skill2"] {
+	display: none;
+}
+
+
+.handcardNumber {
+	bottom: 2px;
+	right: 275px;
+	font-family: 'FZLBJW';
+	text-shadow: #F5D78E 0 0 1px,
+		black 0 0 2px,
+		black 0 0 2px,
+		black 0 0 2px, 
+		black 0 0 2px,
+		black 0 0 2px,
+		black 0 0 2px;
+	color: white;
+	z-index: 1;
+}
+
+.handcardNumber > .cardPicture {
+	left: 312px;
+	bottom: -16px;
+	--w: 417px;
+	--h: calc(var(--w) * 235/ 500);/*宽和长*/
+	width: var(--w);
+	height: var(--h);
+	background-image: url("./images/shoupai1.png");
+	background-size: 100% 100%;
+	box-shadow: 2px 2px 1px #292219;
+	position: relative;
+	 z-index: -1;
+}
+
+.handcardNumber > .cardNumber {
+	left: 450px;
+	bottom: 10px;
+	height: 8px;
+	font-family: 'HYZLSJ';
+	/*font-weight: bold;*/
+	line-height: 20px;
+	text-align: center;
+	font-size: 19px;
+	-webkit-text-stroke: 0px black;
+	white-space: nowrap;
+}
+
+.cardRoundNumber {
+	top: 35px;
+	right: 123px;/*牌堆数及游戏时间，轮数整体。越大越往左*/
+	font-family: 'shousha';
+	text-shadow: #F5D78E 0 0 1px, black 0 0 2px, black 0 0 2px, black 0 0 2px, black 0 0 2px, black 0 0 2px, black 0 0 2px;
+}
+
+.cardRoundNumber > .cardPileNumber {
+	--w: 38px;
+	--h: calc(var(--w) * 210/ 157);
+	top: -11px;
+	width: var(--w);
+	height: var(--h);
+	background-image: url("./images/cardback.png");
+	background-size: 100% 100%;
+	left: 8px;
+	position: relative;
+}
+.cardRoundNumber > .cardPileNumber > span {
+	left: 0px;
+	bottom: 6px;
+	width: 100%;
+	color: #F5D78E;
+	display: block;
+	position: absolute;
+	line-height: 24px;
+	text-align: center;
+	font-size: 25.5px;/*牌堆数*/
+	-webkit-text-stroke: 0px black;
+	text-shadow: #F5D78E 0 0 1px, black 0 0 2px, black 0 0 2px, black 0 0 2px, black 0 0 2px, black 0 0 2px, black 0 0 2px;
+	font-weight: bold;
+}
+.cardRoundNumber > .roundNumber,
+.cardRoundNumber > .time {
+ /*游戏轮数显示*/
+	left: 5px;
+	bottom: 65px;
+	height: 16px;
+	line-height: 16px;
+	letter-spacing: 3.2px;
+	font-family: 'shousha';
+	font-size: 21px;
+	/*font-weight: 900;*/
+	text-shadow: #F5D78E 0 0 1px, black 0 0 2px, black 0 0 2px, black 0 0 2px, black 0 0 2px, black 0 0 2px, black 0 0 2px;
+	-webkit-text-stroke: 0px black;
+	white-space: nowrap;
+	color: #F5D78E;
+}
+
+/*游戏时间显示*/
+.cardRoundNumber > .time {
+	bottom: 65px;
+	font-size: 21px;
+	font-family: 'shousha';
+	line-height: 16px;
+	letter-spacing: 3.2px;
+	left: -58px;
+	color: #F5D78E;
+}
