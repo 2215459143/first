@@ -1,3 +1,4 @@
+'use strict';
 game.import("extension",function(lib,game,ui,get,ai,_status){return {name:"互动",editable:false,content:function (config,pack){
 
 
