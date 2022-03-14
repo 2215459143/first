@@ -138,7 +138,7 @@ window.config={
 	connect_characters:['diy'],
 	connect_cards:['huanlekapai','guozhan','sp','zhulu','yingbian'],
 	plays:[],
-	extensions:[],
+	extensions:['boss','cardpile','coin','wuxing','十周年UI', '在线更新', '手杀ui', '全能搜索', '动皮换肤', '互动', 'MVP'],
 	banned:[],
 	bannedcards:[],
 	forbidlist:[],
